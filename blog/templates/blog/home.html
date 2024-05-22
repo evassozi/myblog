@@ -1,3 +1,14 @@
-<h1>Home</h1>
+{% extends 'base.html' %}
+{% block content %}
 
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ipsum eius, et dignissimos dolor doloremque facilis, dolores, ad quam quas eum hic! Blanditiis laboriosam non delectus numquam doloremque exercitationem quam sint nihil facilis quod vel recusandae ipsa reiciendis, dolores facere pariatur explicabo consectetur quasi voluptas! Minima hic temporibus, natus, doloribus officiis ex molestias aut voluptatibus quas autem ullam asperiores animi at laboriosam obcaecati. Tempora, architecto doloremque. Commodi, culpa soluta ipsum officia voluptatum expedita ut accusamus officiis, recusandae sunt nobis dolorum? Quis in laudantium aliquam fuga nobis quo iure, laboriosam quam ea error repudiandae quibusdam, et voluptas rem sint eaque veritatis.</p>
+
+<h1>All Blogs</h1>
+
+{%for blog in blogs%}
+<a href="/{{blog.id}}">
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.author}}</p>    
+</a>
+{%endfor%}
+
+{% endblock content %}
