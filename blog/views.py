@@ -18,3 +18,18 @@ def details(request, id):
     return render(request,
                   template_name="blog/details.html",
                   context=context)
+
+def about(request):
+    context = {}
+    return render(request,
+                  template_name="about.html",
+                  context=context)
+
+def contact(request):
+    context = {}
+    return render(request,
+                  template_name="contact.html",
+                  context=context)
+
+
+

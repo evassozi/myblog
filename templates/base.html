@@ -6,11 +6,18 @@
     <title>Eva's blog</title>
 </head>
 <body>
-  <nav>
-    <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+  <nav style="display: flex; padding: 1em; margin: 0; justify-content: space-between; background: azure;">
+    <h2>Eva's blog</h2>
+    <ul style="display: flex; list-style: none;">
+      <li style="padding-right: 1em;">
+           <a href="/"> Home </a>
+      </li>
+      <li style="padding-right: 1em;">
+          <a href="/about"> About </a>
+      </li>
+      <li style="padding-right: 1em;">
+        <a href="/contact"> Contact </a>
+      </li>
     </ul>
   </nav>
     {%block content%}
