@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Blog
+import markdown
+
 
 # Create your views here.
 def home(request):
@@ -13,7 +15,8 @@ def home(request):
 
 def details(request, id):
     blog = Blog.objects.get(id=id)
-    context = {"blog":blog}
+    content = markdown.markdown(blog.content_markdown)
+    context = {"blog":blog, "content":content}
 
     return render(request,
                   template_name="blog/details.html",
