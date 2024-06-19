@@ -7,7 +7,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("blog.urls"))
+    path('', include("blog.urls")),
+    path('index/', view=include('index.urls'))
 ]
 
 urlpatterns += staticfiles_urlpatterns()

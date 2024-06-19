@@ -6,3 +6,6 @@ class Blog(models.Model):
     author = models.CharField(max_length=122)
     content_markdown = models.TextField(default="")
     image = models.ImageField(upload_to='blog/images')
+
+    def __str__(self):
+        return self.title
